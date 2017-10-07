@@ -31,4 +31,3 @@ for file in os.listdir(path):
         continue
     else:
         continue
-
