@@ -22,10 +22,15 @@ jacoco {
 jacocoTestReport {
     reports {
         xml.enabled true
-        csv.enabled true
+        csv.enabled false
         xml.destination file("${buildDir}/jacocoXML")
-        csv.destination file("${buildDir}/jacocoCSV")
         html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+
+test {
+    afterTest { desc, result ->
+        logger.quiet "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
     }
 }
 
