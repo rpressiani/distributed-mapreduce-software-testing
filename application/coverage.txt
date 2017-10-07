@@ -1,0 +1,20 @@
+[EMMA v2.0.5312 report, generated Tue Oct 03 22:51:16 CDT 2017]
+-------------------------------------------------------------------------------
+OVERALL COVERAGE SUMMARY:
+
+[class, %]	[method, %]	[block, %]	[line, %]	[name]
+96%  (24/25)!	66%  (63/96)!	80%  (4787/5973)	63%  (455.4/720)!	all classes
+
+OVERALL STATS SUMMARY:
+
+total packages:	1
+total classes:	25
+total methods:	96
+total executable files:	13
+total executable lines:	720
+
+COVERAGE BREAKDOWN BY PACKAGE:
+
+[class, %]	[method, %]	[block, %]	[line, %]	[name]
+96%  (24/25)!	66%  (63/96)!	80%  (4787/5973)	63%  (455.4/720)!	com.salvadorjacobi.tetris
+-------------------------------------------------------------------------------
