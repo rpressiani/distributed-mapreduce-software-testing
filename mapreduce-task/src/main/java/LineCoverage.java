@@ -73,6 +73,8 @@ public class LineCoverage extends Configured implements Tool {
         job2.setMapOutputKeyClass(LineWritable2.class);
         job2.setMapOutputValueClass(Text.class);
 
+        job2.setNumReduceTasks(1);
+
         ControlledJob controlledJob2 = new ControlledJob(conf2);
         controlledJob2.setJob(job2);
 
