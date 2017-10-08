@@ -25,10 +25,10 @@ ___
 
 ### Run MapReduce job locally
 
-\n
+```
 ./gradlew run 
 sbt run
-\n
+```
 
 `sbt run`
 
