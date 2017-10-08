@@ -17,10 +17,20 @@ ___
 
 ### Jacoco Line Coverage
 
-`./gradlew build`  `./gradlew jacocoTestReport`
+To run the Jacoco plugin, you have to build the project and then run the Jacoco plugin with Gradle.
+
+```shell
+./gradlew build
+./gradlew jacocoTestReport
+```
 
 ### Python XML Parser
 
+XMLTestParser will create a diretory inside <dir> with the preprocessed line coverage report. The new files will be in CSV format readable by the MapReduce job.
+
+```python
+python XMLTestParser.py <dir>
+```
 
 
 ### Run MapReduce job locally
