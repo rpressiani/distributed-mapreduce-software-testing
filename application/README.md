@@ -1,4 +1,4 @@
-# HW1 - CS441/CS474
+# Sample Application
 ___
 Assignment delivered by Riccardo Pressiani ([rpress4@uic.edu](mailto:rpress4@uic.edu)) as Homework 1 for both CS441 and CS474 courses, held at University of Illinois at Chicago during Fall 2017.
 
@@ -24,6 +24,8 @@ The _ExpectedException_ object is created in order to verify the correct behavio
 * **_rotationCannotBeNegative_**: This test case verify that the method that rotates a tetrimino never returns a negative rotation value. As a matter of fact the rotation of a tetrimino must be in a range between 0 and 3.
 
 * **_outOfBoundRotationNotAllowed_**: This test case verify that a new tetrimino cannot be created with an out of bound rotation value and that the relative exception will be thrown.
+
+[Update] Other tests have been added as part of homework 2 of the CS441 course.
 
 
 Both Gradle and sbt can be used to run the tests using one of the following commands:
