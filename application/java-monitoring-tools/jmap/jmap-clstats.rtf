@@ -1,0 +1,18 @@
+➜  ~ jmap -clstats 74592
+Attaching to process ID 74592, please wait...
+Debugger attached successfully.
+Server compiler detected.
+JVM version is 25.144-b01
+finding class loader instances ..done.
+computing per loader stat ..done.
+please wait.. computing liveness...liveness analysis may be inaccurate ...
+class_loader	classes	bytes	parent_loader	alive?	type
+
+<bootstrap>	2209	4064266	  null  	live	<internal>
+0x000000076aba7478	0	0	0x000000076ab549a0	dead	java/util/ResourceBundle$RBClassLoader@0x00000007c005d368
+0x000000076ab3d750	0	0	  null  	live	sun/misc/Launcher$ExtClassLoader@0x00000007c000fa48
+0x000000076ab549a0	110	365746	0x000000076ab3d750	live	sun/misc/Launcher$AppClassLoader@0x00000007c000f6a0
+0x000000076aec5a20	12	37396	0x000000076ab549a0	dead	sun/reflect/misc/MethodUtil@0x00000007c00da2d8
+0x000000076bc79e58	1	889	0x000000076aec5a20	dead	sun/reflect/DelegatingClassLoader@0x00000007c0009df8
+
+total = 6	2332	4468297	    N/A    	alive=3, dead=3	    N/A

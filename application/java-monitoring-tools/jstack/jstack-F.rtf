@@ -1,0 +1,80 @@
+➜  ~ jstack -F 75238
+Attaching to process ID 75238, please wait...
+Debugger attached successfully.
+Server compiler detected.
+JVM version is 25.144-b01
+Deadlock Detection:
+
+No deadlocks found.
+
+Thread 46147: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Compiled frame; information may be imprecise)
+ - java.lang.Object.wait() @bci=2, line=502 (Compiled frame)
+ - com.sun.media.sound.EventDispatcher.dispatchEvents() @bci=64, line=182 (Interpreted frame)
+ - com.sun.media.sound.EventDispatcher.run() @bci=1, line=222 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=748 (Interpreted frame)
+
+
+Thread 7171: (state = BLOCKED)
+
+
+Thread 84751: (state = BLOCKED)
+ - sun.misc.Unsafe.park(boolean, long) @bci=0 (Compiled frame; information may be imprecise)
+ - java.util.concurrent.locks.LockSupport.park(java.lang.Object) @bci=14, line=175 (Compiled frame)
+ - java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await() @bci=42, line=2039 (Compiled frame)
+ - java.awt.EventQueue.getNextEvent() @bci=52, line=554 (Compiled frame)
+ - java.awt.EventDispatchThread.pumpOneEventForFilters(int) @bci=51, line=170 (Compiled frame)
+ - java.awt.EventDispatchThread.pumpEventsForFilter(int, java.awt.Conditional, java.awt.EventFilter) @bci=35, line=116 (Interpreted frame)
+ - java.awt.EventDispatchThread.pumpEventsForHierarchy(int, java.awt.Conditional, java.awt.Component) @bci=11, line=105 (Interpreted frame)
+ - java.awt.EventDispatchThread.pumpEvents(int, java.awt.Conditional) @bci=4, line=101 (Interpreted frame)
+ - java.awt.EventDispatchThread.pumpEvents(java.awt.Conditional) @bci=3, line=93 (Interpreted frame)
+ - java.awt.EventDispatchThread.run() @bci=9, line=82 (Interpreted frame)
+
+
+Thread 84543: (state = BLOCKED)
+ - sun.misc.Unsafe.park(boolean, long) @bci=0 (Compiled frame; information may be imprecise)
+ - java.util.concurrent.locks.LockSupport.parkNanos(java.lang.Object, long) @bci=20, line=215 (Compiled frame)
+ - java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(long) @bci=78, line=2078 (Compiled frame)
+ - java.util.concurrent.DelayQueue.take() @bci=134, line=223 (Compiled frame)
+ - javax.swing.TimerQueue.run() @bci=20, line=174 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=748 (Interpreted frame)
+
+
+Thread 62991: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove(long) @bci=59, line=143 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove() @bci=2, line=164 (Interpreted frame)
+ - sun.java2d.Disposer.run() @bci=3, line=148 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=748 (Interpreted frame)
+
+
+Thread 55315: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Compiled frame; information may be imprecise)
+ - sun.java2d.opengl.OGLRenderQueue$QueueFlusher.run() @bci=15, line=203 (Interpreted frame)
+
+
+Thread 32031: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Compiled frame; information may be imprecise)
+ - java.lang.Object.wait() @bci=2, line=502 (Interpreted frame)
+ - sun.awt.AWTAutoShutdown.run() @bci=32, line=295 (Interpreted frame)
+ - java.lang.Thread.run() @bci=11, line=748 (Interpreted frame)
+
+
+Thread 775: (state = IN_NATIVE)
+
+
+Thread 18435: (state = BLOCKED)
+
+
+Thread 14595: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove(long) @bci=59, line=143 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove() @bci=2, line=164 (Interpreted frame)
+ - java.lang.ref.Finalizer$FinalizerThread.run() @bci=36, line=209 (Interpreted frame)
+
+
+Thread 14083: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.Object.wait() @bci=2, line=502 (Interpreted frame)
+ - java.lang.ref.Reference.tryHandlePending(boolean) @bci=54, line=191 (Interpreted frame)
+ - java.lang.ref.Reference$ReferenceHandler.run() @bci=1, line=153 (Interpreted frame)
