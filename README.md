@@ -1,12 +1,12 @@
-# HW1 - CS441/CS474
+# Distributed Software Testing with MapReduce
 ___
-Assignment delivered by Riccardo Pressiani ([rpress4@uic.edu](mailto:rpress4@uic.edu)) as Homework 2 for CS441, held at University of Illinois at Chicago during Fall 2017.
+Assignment delivered by Riccardo Pressiani ([rpress4@uic.edu](mailto:rpress4@uic.edu)) as Homework 1 and 2 for CS441, held at University of Illinois at Chicago during Fall 2017.
 
 ## Description
 ___
-The goal of this homework was to gain experience with the Apache Hadoop framework and the Amazon AWS platform with a focus on AWS Elastic Map Reduce.
+The goal of this project was to gain experience with the Apache Hadoop framework and the Amazon AWS platform with a focus on AWS Elastic Map Reduce. To do this, we have been asked to implement a MapReduce job to parallelize software testing on Apache Hadoop.
 
-Two directory can be found in the repository: `application` and `mapreduce-task`. In the first one, the Java application used for the previous homework has been uploaded along with an expanded test set. Instead, in the second directory, the Map Reduce application implemented for this homework has been uploaded.
+Two directory can be found in the repository: `application` and `mapreduce-task`. In the first one, the Java application used as sample application has been uploaded. Instead, in the second directory, the Map Reduce application has been uploaded.
 
 In order to retrieve the test line coverage information, the Jacoco plugin for Gradle has been used. The report are generated as XML files and in order to be processed by Hadoop, they are preprocessed with a Python script that extract the information needed and store it as CSV files. The Python script (`XMLTestParser.py`) can be found in the `mapreduce-task` directory.
 
@@ -15,7 +15,7 @@ After being tested locally, the Map Reduce task has been deployed on AWS EMR. Th
 ### Map Reduce implementation
 The Map Reduce implementation is structured on two separate jobs. The Map class of the first job accept as input CSV lines and map the input as <(className, lineNumber), test>. The tuples returned by the map are ordered by key. The reducer of the first job accumulate in a list all the test values corresponding to each pair (className, lineNumber), so that the result is <(className, lineNumber), [test1, test2, ...]>.
 
-The second job has been necessary to sort the tuples in descending order by the number of tests that cover each line, as requested in the assignment. This could not be done in the first job since at the time the first Map is running the number of the tests that cover a line is now known and the sorting of the tuples is based on the `compareTo` method of the map class.
+The second job has been necessary to sort the tuples in descending order by the number of tests that cover each line, as requested in the assignment. This could not be done in the first job since, at the time the first Map is running, the number of the tests that cover a line is not known and the sorting of the tuples is based on the `compareTo` method of the map class.
 
 ## Usage
 ___
